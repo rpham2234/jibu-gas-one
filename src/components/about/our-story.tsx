@@ -21,7 +21,7 @@ export default function OurStory() {
               <div className="md: py-16">
                 <h2 className="text-2xl font-bold mb-4">Our Story</h2>
                 <p className="mb-3">
-                    This Joint venture partnership between Jibu Rwanda and Japan's leading LP Gas company 
+                    This Joint venture partnership between Jibu Rwanda and Japan&apos;s leading LP Gas company 
                     Saisan Co Ltd., brings to life the Joint Venture company, Jibu Gas One. It is expected to 
                     contribute to and change the management and flow of LP Gas in Rwanda. 
                 </p>
