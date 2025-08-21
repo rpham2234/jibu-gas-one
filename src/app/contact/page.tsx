@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div>
         {/* Header and contact Info */}
-        <ContactInfo phone={info.phone} address={info.address} facebook={info.facebook} twitter={info.twitter} instagram={info.instagram} linkedin={info.linkedin} />
+        <ContactInfo telephone={info.telephone} address={info.address} person={info.person} twitter={info.twitter} cell={info.cell} />
         <ContactForm />
     </div>
   );

@@ -19,65 +19,25 @@ import Image from "next/image";
 // Demo items (replace with your own)
   const franchisees = [
     {
-        "name": "Rehema Uwamahoro",
-        "location": "Franchisee in Rwamagana, Rwanda",
-        "image": "https://jibuco.com/wp-content/uploads/2022/10/Uwamahoro-Rehema-Franchisee-Rwamagana-min-731x1024.jpg"
+        "caption": "Rehema Uwamahoro",
+        "description" : "abcd",
+        "image": "https://images.ctfassets.net/biri6h57v7dr/6GrT7WFV2OyNeBjC1blJUc/1ea96f3b21feb09e7a75f71f86c2422b/IMG-20250612-WA0011.jpg"
       },
       {
-        "name": "Dorcus",
-        "location": "Franchisee in Buruburu, Kenya",
-        "image": "https://jibuco.com/wp-content/uploads/2023/01/MG_2009-1-jpg.webp"
+        "caption": "Dorcus",
+        "description" : "abcd",
+        "image": "https://images.ctfassets.net/biri6h57v7dr/5XXSLjCzaKoXHB6b0ErqbQ/60b0f350570c806635453dd07d49f69f/IMG-20250620-WA0004.jpg"
       },
       {
-        "name": "Mediatrice Muvuna",
-        "location": "Franchisee in Kinamba, Musanze, Nyagatare - Rwanda",
-        "image": "https://jibuco.com/wp-content/uploads/2022/10/Mediatrice-Muvuna-Franchisee-Kinamba-min-731x1024.jpg"
+        "caption": "Mediatrice Muvuna",
+        "description" : "abcd",
+        "image": "https://images.ctfassets.net/biri6h57v7dr/1GDwX593LieRG5wig1Ta8E/1c570cc29b246b7e079577b8e5e1d55b/IMG-20250808-WA0010.jpg"
       },
       {
-        "name": "Carol Mbabazi",
-        "location": "Franchisee in Kicukiro & Sonatube, Rwanda",
+        "caption": "Carol Mbabazi",
+        "description" : "abcd",
         "image": "https://jibuco.com/wp-content/uploads/2022/10/Carol-Mbabazi-Franchisee-Kicukiro-and-Sonatube-min-731x1024.jpg"
       },
-      {
-        "name": "Ivan Ntabazi",
-        "location": "Franchisee in Ggaba & Munyonyo, Uganda",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/IVAN-NTABAZI-min-731x1024.webp"
-      },
-      {
-        "name": "Ian Odong",
-        "location": "Franchisee in Ntinda, Uganda",
-        "image": "https://jibuco.com/wp-content/uploads/2022/10/IAN-ODONG-JIBU-NTINDA-MAY_16-min-731x1024.jpg"
-      },
-      {
-        "name": "Charity Wafula",
-        "location": "Franchisee in Karen, Kenya",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/Charity-Wafula-Franchisee-Karen-min-1-731x1024.webp"
-      },
-      {
-        "name": "Rosine Uwamaharo",
-        "location": "Franchisee in Nyamata & Gasogi 1, Rwanda",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/Uwamaharo-Rosine-Franchisee-Nyamata-and-Gasogi-1-min-731x1024.webp"
-      },
-      {
-        "name": "Aimee Kanyoni",
-        "location": "Franchisee in Ville, Goma, DRC",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/Aimee-Kanyoni-Franchisee-Ville-min-819x1024-min-1-731x1024.webp"
-      },
-      {
-        "name": "Bahati Patient",
-        "location": "Franchisee in Unigom, Goma, DRC",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/Bahati-Patient-Franchisee-Unigom-min-min-731x1024.webp"
-      },
-      {
-        "name": "Eric Nsengimana",
-        "location": "Franchisee in Virunga 2, Goma, DRC",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/Eric-Nsengimana-Franchisee-Virunga-2-min-min-1-731x1024.webp"
-      },
-      {
-        "name": "Walter Opio",
-        "location": "Franchisee in Najjanankumbi",
-        "image": "https://jibuco.com/wp-content/uploads/2023/02/WALTER-OPIYO-OJIJO-JIBU-LWEZA-FEB_16-min-731x1024-min-731x1024.webp"
-      }
   ];
 
 function useResizeObserver(targetRef: React.RefObject<HTMLElement>) {
@@ -102,8 +62,8 @@ function classNames(...c: Array<string | false | null | undefined>) {
 }
 
 export type Franchisee = {
-    name: string;
-    location: string;
+    caption: string;
+    description: string;
     image: string;
     //cta?: { label: string; href: string };
 };
@@ -297,10 +257,10 @@ export default function CardCarousel({
             <div key={i} data-slide={i} className="snap-start shrink-0 min-w-0 basis-[85%] sm:basis-[75%] md:basis-[48%] lg:basis-[32%]">
                 <article className="bg-white rounded-2xl shadow-md overflow-hidden text-center">
                     {/* Keep image inside card, keep aspect ratio */}
-                    <div className="relative w-full aspect-[3/4]">
+                    <div className="relative w-full aspect-[4/3]">
                     <Image
                         src={item.image}
-                        alt={item.name}
+                        alt={item.caption}
                         fill
                         className="object-cover"
                         sizes="(min-width:1024px) 33vw, (min-width:768px) 48vw, 85vw"
@@ -308,8 +268,8 @@ export default function CardCarousel({
                     </div>
 
                     <div className="p-4">
-                    <h3 className="font-semibold">{item.name}</h3>
-                    <p className="text-sm text-gray-500">{item.location}</p>
+                    <h3 className="font-semibold">{item.caption}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
                     </div>
                 </article>
             </div>

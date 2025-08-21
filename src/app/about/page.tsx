@@ -11,7 +11,7 @@ import OurMission from "@/components/about/mission";
 export default function uganda() {
   return (
     <main>
-      <HeroImage imageurl="https://images.ctfassets.net/biri6h57v7dr/3GHOaBSz8TxcbqOdBwLzXI/9d368a14af776c4c4cca151f2acf1f6b/IMG-20250702-WA0017.jpg" showText={true} title="About Us" subtitle="" showButton={false} />
+      <HeroImage imageurl="https://images.ctfassets.net/biri6h57v7dr/3ut1n3af8ijTKYPWXBRFsN/94241acdbcc5cdf20953a61ea180b6bc/Picture3.jpg" showText={true} title="About Us" subtitle="" showButton={false} />
       <section className="p-6 bg-[#1b559b]">
         <Overview />
       </section>

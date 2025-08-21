@@ -1,23 +1,26 @@
 'use client'
-import { link } from 'fs';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 export default function ContactInfo({
-    phone = "+1234567890",
+    telephone = "+1234567890",
+    cell = "6546543",
     address = "sample address",
-    facebook = "facebook link",
+    person = "John Doe",
     instagram = "instagram link",
+    facebook = "facebook link",
     twitter = "twitter link",
     linkedin = "linkedin link",
 
     }: {
-    phone?: string;
+    telephone?: string;
+    cell?: string;
     address?: string;
+    person?: string;
     facebook?: string;
-    instagram?: string
-    twitter?: string
-    linkedin?: string
+    instagram?: string;
+    twitter?: string;
+    linkedin?: string;
 }) {
     return(<div className="flex justify-center mt-10 px-4">
       <div className="flex flex-wrap gap-4 max-w-6xl w-full">
@@ -34,7 +37,9 @@ export default function ContactInfo({
             </div>
             <div className="flex flex-col justify-between flex-grow">
               <p className="leading-relaxed text-xl text-gray-900 dark:text-gray-100">
-                {phone}
+                {person}<br/>
+                Tel: {telephone} <br/>
+                Cell: {cell}
               </p>
             </div>
           </div>
