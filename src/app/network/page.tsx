@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
 import {info} from "../info"
+import { jibuRw } from './locations'
 
 const StoreLocator = dynamic(() => import('@/components/countries/uganda/network/storeFinder'), {
   ssr: false,
@@ -23,7 +24,7 @@ export default function Page() {
                 <p className="mb-6 text-sm md:text-base">Explore our current Sales & Distribution network</p>
             </div>
             <div className="px-0 md:px-8 xl:px-32 py-8 ">
-                <StoreLocator stores={stores} center={info.center as [number, number]}  country={info.country.toLowerCase()} />
+                <StoreLocator stores={jibuRw} center={info.center as [number, number]}  country={info.country.toLowerCase()} />
             </div>
             
         </div>

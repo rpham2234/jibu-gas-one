@@ -10,7 +10,7 @@ export default function ApproachSection() {
           <h2 className="text-4xl font-bold mb-2">凡事徹底</h2>
           <h3 className="text-xl font-medium mb-4">(Bonji Tettei)</h3>
           <p className="italic text-sm text-gray-200">
-            &quot;Implementation thoroughly, even common tasks.&quot;
+            &quot;Implement thoroughly, even with simple tasks&quot;
           </p>
         </div>
 

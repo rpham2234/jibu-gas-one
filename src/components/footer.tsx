@@ -8,12 +8,14 @@ export default function Footer() {
           
           {/* Logo + Text */}
           <div className="space-y-4 text-center md:text-center">
+            <a  href="/">
             <Image
               src="https://images.ctfassets.net/biri6h57v7dr/2ICT3zO1IF75k11BQ9RVSW/bcc3cf03b2f1b66cd483bb1eab74c823/jibu_Gas_One_logo.png"
               alt="Jibu Logo"
               width={150}
               height={150}
             />
+            </a>
            
           </div>
 
@@ -27,18 +29,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/franchise" className="hover:underline">
-                  Jibu Franchise Opportunity
+                <a href="/network" className="hover:underline">
+                  Our Network
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Careers
+                <a href="/contact" className="hover:underline">
+                  Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  FAQ
+                <a href="/lpg-smart-station" className="hover:underline">
+                  LPG Smart Station
                 </a>
               </li>
             </ul>

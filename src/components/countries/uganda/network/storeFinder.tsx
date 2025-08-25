@@ -89,8 +89,9 @@ export default function StoreLocator({ stores, center, zoom = 13, country }: Sto
       </div>
 
       {/* Store List Section */}
-      <div className="w-full lg:w-1/3 p-4 lg:p-8">
+      <div className="w-full lg:w-1/3 p-4 lg:p-8 flex flex-col max-h-[80vh] lg:max-h-[calc(100vh-4rem)] overflow-hidden">
         <h2 className="text-xl font-semibold mb-4">Search for a Jibustore</h2>
+
         <input
           type="text"
           placeholder="Search"
@@ -98,7 +99,9 @@ export default function StoreLocator({ stores, center, zoom = 13, country }: Sto
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full p-2 mb-4 border rounded-md bg-gray-200"
         />
-        <ul className="space-y-4">
+
+        {/* Scrollable list */}
+        <ul className="space-y-4 overflow-y-auto pr-2 flex-1 overscroll-contain">
           {filteredStores.length > 0 ? (
             filteredStores.map((store, index) => (
               <li
@@ -106,7 +109,7 @@ export default function StoreLocator({ stores, center, zoom = 13, country }: Sto
                 className="border-b pb-2 cursor-pointer hover:bg-gray-100 p-2 rounded"
                 onClick={() => {
                   setSelectedPosition(store.position);
-                  setShowMap(true); // Ensure map shows when clicking store
+                  setShowMap(true);
                 }}
               >
                 <p className="font-bold">{store.name}</p>
@@ -118,6 +121,7 @@ export default function StoreLocator({ stores, center, zoom = 13, country }: Sto
           )}
         </ul>
       </div>
+
     </div>
   );
 }

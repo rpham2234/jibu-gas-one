@@ -12,7 +12,7 @@ export default function Overview() {
             <h6 className="italic">Established</h6>
             <ul className="space-y-2">
               <li>
-                <h1 className="text-2xl md:text-5xl">2025</h1> 
+                <h1 className="text-2xl md:text-5xl">2024</h1> 
               </li>
               
             </ul>
@@ -23,17 +23,12 @@ export default function Overview() {
             <h6 className="italic">Investors</h6>
             <ul className="space-y-2">
               <li>
-                <h1 className="text-2xl md:text-4xl">Company</h1> 
+                <h1 className="text-2xl md:text-4xl">Saisan Co, Ltd.</h1> 
               </li>
               <li>
-                <h1 className="text-2xl md:text-4xl">Company</h1> 
+                <h1 className="text-2xl md:text-4xl">Jibu (RW) Co, Ltd</h1> 
               </li>
-              <li>
-                <h1 className="text-2xl md:text-4xl">Company</h1> 
-              </li>
-              <li>
-                <h1 className="text-2xl md:text-4xl">Company</h1> 
-              </li>
+             
             </ul>
           </div>
 
@@ -52,7 +47,8 @@ export default function Overview() {
             <h6 className="italic">Message from Representatives</h6>
             <ul className="space-y-2">
               <li>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie</p>
+                <p>At Jibu Gas One, our mission is simple - to put our customers first. We also embrace the principle of doing ordinary things properly. We believe that these steady efforts are what build trust and strengthen our company. Moreover, guided by our slogan, “Clean Energy, Live Better,” we are committed to supporting our communities, protecting the environment, and contributing to a better quality of life.
+</p>
               </li>
               
             </ul>

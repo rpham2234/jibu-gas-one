@@ -15,7 +15,7 @@ export default function Home() {
     },
     {
         img: "https://images.ctfassets.net/biri6h57v7dr/5XXSLjCzaKoXHB6b0ErqbQ/60b0f350570c806635453dd07d49f69f/IMG-20250620-WA0004.jpg?h=250",
-        title:"Reseller Partnership Model)"
+        title:"Reseller Partnership Model"
     },
     {
         img: "https://images.ctfassets.net/biri6h57v7dr/5xaNwCLVy0PjpeaKVITFP1/d422ab8b9931cec20ccd1f70bdd437a3/Picture5.png",

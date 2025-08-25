@@ -5,7 +5,7 @@ export const info = {
     center: [-1.94406, 30.06192], //geographic coordinates for Kigali
     telephone: "+250 789 994 422",
     cell: "+250 739 140 462",
-    address: 'KG684, No.58 Agasaro Village, Kamutwa Cell, Kacyiru Sector,Gasabo District, Kigali City, Rwanda ',
+    address: 'KG684, No.58 Agasaro Village, Kamutwa Cell, Kacyiru Sector, Gasabo District, Kigali City, Rwanda ',
     person: "Konosuke Matsushita (松下幸之助)",
     instagram: "instagram",
     twitter: "x",
