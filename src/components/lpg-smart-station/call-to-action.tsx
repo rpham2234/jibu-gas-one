@@ -23,7 +23,7 @@ export default function CTA() {
                     <div>
                         <button
                         //variant="outline"
-                        className="border-2 border-white text-white px-6 py-12 rounded-full hover:bg-white hover:text-blue-800"
+                        className="border-2 border-white text-white px-6 py-12 m-12 rounded-full hover:bg-white hover:text-blue-800"
                         >
                             <h1 className="text-2xl font-semibold">Become a Smart Station Owner</h1>
                             

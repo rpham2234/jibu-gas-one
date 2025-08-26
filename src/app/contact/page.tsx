@@ -8,14 +8,15 @@ import {info} from '../info'
 import emailjs from '@emailjs/browser'
 
 export default function Contact() {
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
   useEffect(() => {
-    emailjs.init('bXhnzYHnrlBNuW2PU'); // your public key
+    emailjs.init(publicKey); // your public key
   }, []);
 
   return (
     <div>
         {/* Header and contact Info */}
-        <ContactInfo telephone={info.telephone} address={info.address} person={info.person} twitter={info.twitter} cell={info.cell} />
+        <ContactInfo telephone={info.telephone} address={info.address} twitter={info.twitter}  />
         <ContactForm />
     </div>
   );

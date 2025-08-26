@@ -4,9 +4,8 @@ import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaLinkedin } from "reac
 
 export default function ContactInfo({
     telephone = "+1234567890",
-    cell = "6546543",
+  
     address = "sample address",
-    person = "John Doe",
     instagram = "instagram link",
     facebook = "facebook link",
     twitter = "twitter link",
@@ -14,9 +13,8 @@ export default function ContactInfo({
 
     }: {
     telephone?: string;
-    cell?: string;
+  
     address?: string;
-    person?: string;
     facebook?: string;
     instagram?: string;
     twitter?: string;
@@ -25,7 +23,7 @@ export default function ContactInfo({
     return(<div className="flex justify-center mt-10 px-4">
       <div className="flex flex-wrap gap-4 max-w-6xl w-full">
         <div className="container mx-auto my-12 flex flex-col items-center text-center">
-            <h1 className="text-3xl md:text-6xl font-semibold mb-4">Contact Us</h1>
+            <h1 className="text-3xl md:text-6xl font-semibold mb-4">Contact Our Head Office</h1>
         </div>
         {/* Card 1 */}
         <div className="flex-1 min-w-[250px]">
@@ -37,9 +35,7 @@ export default function ContactInfo({
             </div>
             <div className="flex flex-col justify-between flex-grow">
               <p className="leading-relaxed text-xl text-gray-900 dark:text-gray-100">
-                {person}<br/>
-                Tel: {telephone} <br/>
-                Cell: {cell}
+                {telephone}
               </p>
             </div>
           </div>
@@ -76,7 +72,7 @@ export default function ContactInfo({
                     <a href={facebook} className="bg-blue-600 p-2 rounded hover:bg-blue-700">
                         <FaFacebook className="text-white h-5 w-5" />
                     </a>
-                    <a href={twitter} className="bg-pink-600 p-2 rounded hover:bg-pink-700">
+                    <a href={instagram} className="bg-pink-600 p-2 rounded hover:bg-pink-700">
                         <FaInstagram className="text-white h-5 w-5" />
                     </a>
                     <a href={twitter} className="bg-blue-400 p-2 rounded hover:bg-blue-500">

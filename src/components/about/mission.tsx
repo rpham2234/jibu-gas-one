@@ -8,7 +8,7 @@ export default function OurMission() {
                 <div>
                 <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
                 <h1 className="text-3xl md:text-5xl font-semibold mb-4">
-                    Commitment to sustainable growth and environmental protection
+                    Commitment to sustainable growth and environmental protection.
                 </h1>
                 
                     
