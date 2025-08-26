@@ -1,12 +1,17 @@
 'use client';
 
-
-import React from 'react';
+import React from 'react'
+import {useEffect} from 'react';
 import ContactInfo from '@/components/countries/uganda/contact/contactinfo';
 import ContactForm from '@/components/countries/uganda/contact/contactForm';
 import {info} from '../info'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
+  useEffect(() => {
+    emailjs.init('bXhnzYHnrlBNuW2PU'); // your public key
+  }, []);
+
   return (
     <div>
         {/* Header and contact Info */}
