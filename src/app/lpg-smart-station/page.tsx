@@ -8,30 +8,29 @@ import KeyFeatures from "@/components/lpg-smart-station/keyFeatures";
 import PageTitle  from "@/components/subcomponents/pageTitle"
 import { Carousel } from "@/components/lpg-smart-station/carousel";
 import SmartStation from "@/components/lpg-smart-station/smartStation";
+import { getPictures, LPGCarousel } from "./getPictures";
+import { useState, useEffect } from "react";
 
 
-export default function uganda() {
+export default function Page() {
 
-  const slides = [
-    {
-      src: "https://images.ctfassets.net/biri6h57v7dr/6GrT7WFV2OyNeBjC1blJUc/1ea96f3b21feb09e7a75f71f86c2422b/IMG-20250612-WA0011.jpg",
-      alt: "Industrial tank in a yard",
-      title: "Caption",
-      description: "Description of the current photo.",
-    },
-    {
-      src: "https://images.ctfassets.net/biri6h57v7dr/5vC2sllzCL5hoXdQeQ5ed0/d73cd4e3193d9e7feda3e1788dea808f/800px-Saisan_Co._Ltd._1.jpg",
-      alt: "Another image",
-      title: "Saisan Headquarters",
-      description: "Saisan office in Japan",
-    },
-    {
-      src: "https://images.ctfassets.net/biri6h57v7dr/9SMyjYwAJ8EG7jUDpiopS/63a16ee5d337debb519429a51bbd3dfb/IMG-20250702-WA0016.jpg",
-      alt: "Forest",
-      title: "Caption",
-      description: "Third image description.",
-    },
-  ];
+  const [pictures, setPictures] = useState<LPGCarousel[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const data = await getPictures(); // must return Franchisee[]
+        if (alive) setPictures(Array.isArray(data) ? data : []);
+      } finally {
+        if (alive) setLoading(false);
+      }
+    })();
+    return () => { alive = false; };
+  }, []);
+
+  if (loading) return <main className="p-8">Loading…</main>;
 
   return (
     <main>
@@ -46,7 +45,7 @@ export default function uganda() {
         <KeyFeatures />
       </section>
       <section className="md:p-12">
-        <Carousel className="md:m-4" slides={slides}/>
+        <Carousel className="md:m-4" slides={pictures}/>
       </section>
       <section className="bg-[#27a9e1] py-3 md:p-6">
         <SmartStation />
